@@ -34,12 +34,12 @@
 
 ```json
    "scripts": {
-   "dev": "vite",
-   "build": "tsc -b && vite build --base=./",
-   "lint": "eslint .",
-   "preview": "vite preview",
-   "predeploy": "pnpm run build",
-   "deploy": "gh-pages -d dist"
+      "dev": "vite",
+      "build": "tsc -b && vite build --base=./",
+      "lint": "eslint .",
+      "preview": "vite preview",
+      "predeploy": "pnpm run build",
+      "deploy": "gh-pages -d dist"
    }
 ```
 
@@ -96,5 +96,13 @@
 7. Эта команда публикует содержимое папки `dist` на GitHub Pages.
 
 ---
+
+8. vite.config.ts
+```` json
+   export default defineConfig({
+       plugins: [react()],
+       base: '/hw-deploy-pages/'
+   })
+````
 
 👍 Готово! Можно делиться ссылкой на сайт.

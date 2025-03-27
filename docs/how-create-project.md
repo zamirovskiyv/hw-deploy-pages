@@ -1,35 +1,50 @@
-# 🚀 Deploying Vite App to GitHub Pages
+# 📁 Создание нового проекта:
 
 ## 📄 Источники
+[PNPM and Vite](pnpm-and-vite.md)
 
-- [Документация Vite](https://vitejs.dev/)
-- [gh-pages (npm)](https://www.npmjs.com/package/gh-pages)
-- [Video: Deploying Vite App to GitHub Pages.](https://www.youtube.com/watch?v=sIL-C87po1s&t=1090s)
-- [Manual](https://md-deploy.vercel.app/)
-- [Git и GitHub, основа в виде команд](https://daniilminin.gitbook.io/git-i-github-osnova-v-vide-komand)
-
----
+[Create React App](https://create-react-app.dev/docs/getting-started/)
 
 
 ### Terminal
 
+1. Создание проекта
 ```bash
-  pnpm add gh-pages
+  # pnpm
+  pnpm create vite <project name>
+  
+  # yarn
+  yarn create react-app <my-app>
+  
+  # npm
+  npm init react-app <my-app>
+  
 ```
 
-## 1. 📁 Создание нового проекта:
-```bash
-pnpm create vite <project name>
-```
-
-3. 📦 Установка зависимостей:
+2. Установка зависимостей:
 
 ```bash
-pnpm i
+  pnpm i
+  
+  # yarn
+  yarn install
+  
+  # npm
+  npm install
+  
 ```
 
-3. 📦 Установка зависимостей:
+3. Установка зависимостей:
 ```bash
-pnpm i
+  pnpm dev
+  
+  # yarn
+  yarn start
+  
+  # npm
+  npm start
+  
 ```
+---
+
 
