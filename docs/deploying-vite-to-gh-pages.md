@@ -6,22 +6,24 @@
 - [gh-pages (npm)](https://www.npmjs.com/package/gh-pages)
 - [Video: Deploying Vite App to GitHub Pages.](https://www.youtube.com/watch?v=sIL-C87po1s&t=1090s)
 - [Manual](https://md-deploy.vercel.app/)
+- [Git и GitHub, основа в виде команд](https://daniilminin.gitbook.io/git-i-github-osnova-v-vide-komand)
 
 ---
 
 ## 📦 Установка `gh-pages`
 
 ### Terminal
+
 ```bash
-pnpm add gh-pages
+  pnpm add gh-pages
 ```
 
 ### package.json
 
 ```json
-"dependencies": {
-  "gh-pages": "6.3.0" // Версия может отличаться
-}
+   "dependencies": {
+   "gh-pages": "6.3.0" // Версия может отличаться
+   }
 ```
 
 ---
@@ -31,14 +33,14 @@ pnpm add gh-pages
 ### package.json
 
 ```json
-"scripts": {
-"dev": "vite",
-"build": "tsc -b && vite build --base=./",
-"lint": "eslint .",
-"preview": "vite preview",
-"predeploy": "pnpm run build",
-"deploy": "gh-pages -d dist"
-}
+   "scripts": {
+   "dev": "vite",
+   "build": "tsc -b && vite build --base=./",
+   "lint": "eslint .",
+   "preview": "vite preview",
+   "predeploy": "pnpm run build",
+   "deploy": "gh-pages -d dist"
+   }
 ```
 
 ---
@@ -48,7 +50,7 @@ pnpm add gh-pages
 ### Terminal
 
 ```bash
-pnpm run deploy
+  pnpm run deploy
 ```
 
 ---
@@ -77,14 +79,14 @@ pnpm run deploy
    ```
 
 4. Что делает `build`:
-   - `tsc -b`: компилирует TypeScript в JavaScript.
-   - `vite build --base=./`: создаёт сборку в папке `dist`.
+    - `tsc -b`: компилирует TypeScript в JavaScript.
+    - `vite build --base=./`: создаёт сборку в папке `dist`.
 
 5. **Почему `--base=./` важно:**
-   - По умолчанию Vite использует `/` как базовый путь.
-   - GitHub Pages загружает сайт в подкаталог:  
-     `https://username.github.io/repository-name/`
-   - Чтобы пути к ресурсам были корректны, нужно использовать относительные пути (`./`).
+    - По умолчанию Vite использует `/` как базовый путь.
+    - GitHub Pages загружает сайт в подкаталог:  
+      `https://username.github.io/repository-name/`
+    - Чтобы пути к ресурсам были корректны, нужно использовать относительные пути (`./`).
 
 6. После сборки запускается:
    ```bash
